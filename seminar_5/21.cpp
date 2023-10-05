@@ -8,19 +8,19 @@ const double R = 8.314;
 const double ALPHA = 1.1;
 const double g = 9.81;
 
-const double t = 20; // Температура в °C
-const double velocity = 1; // Скорость
-const double D = 1; // Диаметр витка
-const double n = 10; // Число витков
-const double h = 0.1; // Шаг витка
-const double d_outer = 50 * pow(10, -3); // Диаметр внутренний в метрах
-const double delta = 2.5 * pow(10, -3); // Диаметр внешний в метрах
+const double t = 45; // Температура в °C
+const double velocity = 1.5; // Скорость
+const double D = 1.1; // Диаметр витка
+const double n = 24; // Число витков
+const double h = 0.12; // Шаг витка
+const double d_outer = 56 * pow(10, -3); // Диаметр внутренний в метрах
+const double delta = 3.5 * pow(10, -3); // Диаметр внешний в метрах
 const double delta_P1 = 1.5 * 98066.5; // Избыточное давление
 
 // Вода, незначительная коррозия
 const double e = 0.2 * pow(10, -3); // Абсолютная шероховатость
-const double p = 998.2; // Плотность
-const double mu =  1.0026 * pow(10, -3); // Вязкость
+const double p = 990.21; // Плотность
+const double mu =  0.5963 * pow(10, -3); // Вязкость
 
 const double E_enter = 0.2;
 
@@ -72,7 +72,8 @@ double get_delta_P2() {
 }
 
 int main() {
-    cout << get_delta_P2() * 0.00001019716212978;
+    cout << get_delta_P2()* 0.00001019716212978 << endl;
+    //* 0.00001019716212978;
 
     return 0;
 }
