@@ -8,18 +8,18 @@ const double R = 8.314;
 const double ALPHA = 1.1;
 const double g = 9.81;
 
-const double t = 60; // Температура в °C
-const double m = 300.0 * 1000 / 3600; // Массовый расход жидкости кг/с
-const double d_outer = 20 * pow(10, -3); // Диаметр внутренний в метрах
+const double t = 50; // Температура в °C
+const double m = 47 * 1000 / 3600; // Массовый расход жидкости кг/с
+const double d_outer = 25 * pow(10, -3); // Диаметр внутренний в метрах
 const double delta = 2 * pow(10, -3); // Диаметр внешний в метрах
 const double L = 6; // Длинна труб в метрах
-const double N = 1658; // Число труб
-const double k = 2; // Число ходов теплообменника по трубному пространству
+const double N = 404; // Число труб
+const double k = 4; // Число ходов теплообменника по трубному пространству
 
-// Вода, незначительная коррозия
+// Циклогексан, незначительная коррозия
 const double e = 0.2 * pow(10, -3); // Абсолютная шероховатость
-const double p = 983.2; // Плотность
-const double mu =  0.4668 * pow(10, -3); // Вязкость
+const double p = 749.9; // Плотность
+const double mu =  0.608 * pow(10, -3); // Вязкость
 
 // Кожухотрубный комментарий к-ф сопротивления
 const double E_enter = 1.5;
@@ -88,7 +88,7 @@ double get_h_lose() {
 }
 
 int main() {
-    cout << get_h_lose();
+    cout << get_h_lose() << endl;
 
     return 0;
 }
